@@ -10,7 +10,6 @@ describe('Paycheck', function () {
     const paycheck3 = new Paycheck('employee name', ['Adependant name', 'dependant name']);
     const paycheck4 = new Paycheck('Aemployee name', ['Adependant name', 'dependant name', 'dependant name']);
 
-    console.log(Object.getOwnPropertyNames(paycheckNoDependant))
     describe('Should have a discount', function () {
         it(`should not have a discount anyone whose name doesn't start with ‘A’`, function () {
             assert.strictEqual(paycheckNoDependant.haveDiscount(), false);

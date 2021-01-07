@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "development": "cross-env NODE_ENV=test DEBUG=myapp:* nodemon ./bin/www",
     "unit-test": "mocha ./tests/unit/**/*.js",
-    "integration-test": "mocha ./tests/integration/**/*.js"
+    "integration-test": "mocha ./tests/integration/**/*.js",
+    "test": "npm run unit-test && npm run integration-test"
   },
   "dependencies": {
     "compression": "^1.7.4",
