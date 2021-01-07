@@ -16,21 +16,31 @@ For deploy:
   - Nginx
   - [PM2](https://pm2.keymetrics.io/) process manager
 
-### Development environment
+## Development
 
-## Deploy
-
-### Development
-
-Run code with live reload
+Run project with live reload
 
 ```Shell
 npm run development
 ```
 
+Run tests
+
+```Shell
+npm run test
+npm run integration-test
+npm run unit-test
+```
+
 ### Production
 
 #### Docker
+
+Deploy solution with reverse proxy on docker instance with docker compose
+
+```Shell
+docker-compose up
+```
 
 #### PM2
 

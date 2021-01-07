@@ -1,0 +1,21 @@
+version: "3.5"
+services:
+  nginx-docker:
+    container_name: nginx-docker
+    build: ./nginx
+    ports: 
+     - 443:433
+     - 80:80
+    restart: unless-stopped
+  paycheck-module-1:
+    container_name: paycheck-module-1
+    build: ./
+    ports: 
+      - 3000:3000
+    restart: unless-stopped
+  paycheck-module-2:
+    container_name: paycheck-module-2
+    build: ./
+    ports: 
+      - 3001:3000
+    restart: unless-stopped
