@@ -2,11 +2,8 @@ const { Paycheck } = require('../models/paycheck')
 
 function calculatePaycheck(req) {
     let employeeName = req.body.name;
-    let dependants = [];
+    let dependants = req.body.dependants;
     
-    if(req.body.dependants) {
-        dependants = Array.isArray(req.body.dependants) ? req.body.dependants : [req.body.dependants];
-    }
     let paycheck = new Paycheck(employeeName, dependants);
 
     return paycheck.toOBJ();
