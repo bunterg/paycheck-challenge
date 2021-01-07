@@ -27,7 +27,7 @@ describe('POST /paycheck', () => {
     beforeEach(function () {
         server = require('../../app');
     });
-    it('should return home site', done => {
+    it('should return to result', done => {
         chai
             .request(server)
             .post('/paycheck')
@@ -35,6 +35,28 @@ describe('POST /paycheck', () => {
             .send(mock.req)
             .end((err, res) => {
                 res.should.have.status(200);
+                done();
+            });
+    });
+    it('should return to result', done => {
+        chai
+            .request(server)
+            .post('/paycheck')
+            .type('form')
+            .send({
+                name: 'employee'
+            })
+            .end((err, res) => {
+                res.should.have.status(200);
+                done();
+            });
+    });
+    it('should return some error', done => {
+        chai
+            .request(server)
+            .post('/paycheck')
+            .end((err, res) => {
+                res.should.have.status(400);
                 done();
             });
     });
@@ -52,6 +74,29 @@ describe('POST /api/v1/paycheck_calculate', () => {
             .end((err, res) => {
                 res.should.have.status(200);
                 expect(res.body).to.deep.equal(mock.res);
+                done();
+            });
+    });
+    it('should calculate take home pay', done => {
+        chai
+            .request(server)
+            .post('/paycheck')
+            .type('form')
+            .send({
+                name: 'employee'
+            })
+            .end((err, res) => {
+                res.should.have.status(200);
+                done();
+            });
+    });
+    it('should throw error', done => {
+        chai
+            .request(server)
+            .post('/paycheck')
+            .type('form')
+            .end((err, res) => {
+                res.should.have.status(400);
                 done();
             });
     });
