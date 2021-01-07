@@ -3,12 +3,22 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var helmet = require("helmet");
+var cors = require('cors');
+var compression = require('compression');
 
 var indexRouter = require('./routes/index');
 var paycheckRouter = require('./routes/paycheck');
 var apiRouter = require('./routes/api');
 
 var app = express();
+
+// security setup
+app.use(helmet());
+app.use(cors());
+
+//Compress all routes
+app.use(compression());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
