@@ -1,0 +1,18 @@
+{
+    "req": {
+        "name": "Employee name",
+        "dependants": "Dependants name"
+    },
+    "res": {
+        "paycheckCount": 26,
+        "paycheckAmount": 2000,
+        "paycheckSum": 52000,
+        "dependantsCount": 1,
+        "dependantsCost": 500,
+        "dependantsIndividualCost": 500,
+        "benefitsCost": 1000,
+        "haveDiscount": false,
+        "discount": 0,
+        "computedValue": 50500
+    }
+}

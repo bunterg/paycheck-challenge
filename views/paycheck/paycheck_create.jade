@@ -1,0 +1,21 @@
+extends paycheck_layout
+
+block content
+    script(src='/javascripts/dependantForm.js' defer)
+
+    div.w3-container.w3-margin-top
+        form(method="post").w3-container.w3-card-4
+            h2 Input form
+            .w3-section
+                input(type="text", name="name", required).w3-input
+                label(for="name") Name
+            .w3-section
+                h3 Dependants
+            .w3-section.w3-center
+                button(type="button").w3-button.w3-circle.w3-large.w3-theme.w3-card-4.paychect-button_padding#dependantAdd
+                    i.fa.fa-plus
+                button(type="button").w3-button.w3-circle.w3-large.w3-card-4.paychect-button_padding#dependantRemove
+                    i.fa.fa-minus
+            .w3-section#dependantContainer
+                
+            input(type="submit").w3-btn.w3-theme.w3-section

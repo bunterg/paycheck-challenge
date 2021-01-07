@@ -1,0 +1,38 @@
+extends paycheck_layout
+
+block content    
+    div.w3-container.w3-margin-top
+        h4 Results
+        table.w3-table-all
+            thead
+                tr.w3-theme-l3
+                    th Item
+                    th Count
+                    th asda
+                    th Year
+            tbody
+                tr
+                    td Paychecks
+                    td #{paycheckCount}
+                    td Monthly $#{paycheckAmount}
+                    td $#{paycheckSum}
+                tr
+                    td Dependents
+                    td #{dependantsCount}
+                    td Yearly $#{dependantsIndividualCost}
+                    td -$#{dependantsCost}
+                tr
+                    td Benefits
+                    td -
+                    td Yearly $#{benefitsCost}
+                    td -$#{benefitsCost}
+                tr
+                    td Discount
+                    td Apply? #{haveDiscount}
+                    td -
+                    td $#{discount}
+                tr.w3-theme-l4
+                    td Take home pay
+                    td -
+                    td -
+                    td $#{computedValue}

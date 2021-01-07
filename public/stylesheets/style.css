@@ -1,0 +1,12 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.paychect-button_padding {
+  margin-left: 16px;
+  margin-right: 16px;
+}

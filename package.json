@@ -1,0 +1,27 @@
+{
+  "name": "paylocity-challenge-ejs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "development": "cross-env NODE_ENV=test DEBUG=myapp:* nodemon ./bin/www",
+    "unit-test": "mocha ./tests/unit/**/*.js",
+    "integration-test": "mocha ./tests/integration/**/*.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.5",
+    "debug": "~4.3.1",
+    "express": "~4.17.1",
+    "http-errors": "~1.8.0",
+    "jade": "~1.11.0",
+    "morgan": "~1.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.3",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "sinon": "^9.2.3"
+  }
+}
